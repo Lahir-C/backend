@@ -66,9 +66,9 @@ stages:
     steps:
     - script: |
         echo "Replacing VERSION with $(version) in backend.yml"
-        sed -i "s|VERSION|$(version)|g" backend.yml
-        cat backend.yml
-        cp backend.yml $(Build.ArtifactStagingDirectory)/
+        sed -i "s|VERSION|$(version)|g" ADO-Backend-Nodejs-main/ADO-Backend-Nodejs-main/backend.yml
+        cat path/to/backend.yml
+        cp path/to/backend.yml $(Build.ArtifactStagingDirectory)/
       displayName: 'Modify Kubernetes Manifest'
 
     - task: PublishBuildArtifacts@1

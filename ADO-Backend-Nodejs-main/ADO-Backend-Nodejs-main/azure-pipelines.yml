@@ -24,7 +24,7 @@ stages:
       displayName: 'Build Docker Image'
       inputs:
         containerRegistry: 'Project1C'
-        repository: 'perseverance-project'
+        repository: 'backend'
         command: 'build'
         Dockerfile: '**/Dockerfile'
         tags: |
@@ -42,7 +42,7 @@ stages:
       displayName: 'Push Docker Image' 
       inputs:
         containerRegistry: 'Project1C'
-        repository: 'perseverance-project'
+        repository: 'backend'
         command: 'push'
         tags: |
           $(version)
